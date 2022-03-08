@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 26px;
+  max-width: 280px;
+  text-align: center;
+  &--advantages {
+    margin: 32px 30px 11px;
+  }
+  &--reserve {
+    margin: 33px 20px 27px;
+  }
+  @media (min-width: $tablet-width) {
+    max-width: 435px;
+  }
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.444;
+}
+
+.header--advantages {
+  @media (min-width: $tablet-width) {
+    br {
+      display: none;
+    }
+  }
+}

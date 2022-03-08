@@ -1,0 +1,202 @@
+.main-nav {
+  background-color: $blue-basic;
+
+  @media (min-width: $tablet-width) {
+    background-color: $white-basic;
+  }
+}
+
+.main-nav__wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+//  list
+.main-nav__list {
+  display: grid;
+  grid-template-rows: repeat(4, 55px);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 34px;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 0 76px;
+  }
+}
+
+.main-nav__list--toggle {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+// item
+.main-nav__item {
+  @media (max-width: $tablet-width) {
+    box-shadow: 0 1px 0 rgba($color: #111111, $alpha: 0.2),
+      inset 0 1px 0 rgba($color: #ffffff, $alpha: 0.2);
+  }
+}
+
+// link
+.main-nav__link {
+  color: $white-basic;
+  transition: 0.3s;
+  display: block;
+  padding: 7.5px 0;
+  &:hover {
+    background-color: $blue-hover;
+  }
+  &:active {
+    background-color: $blue-down;
+    color: $white-down;
+  }
+  @media (min-width: $tablet-width) {
+    color: $black-basic;
+    &:hover {
+      color: $blue-basic;
+      background-color: transparent;
+    }
+    &:active {
+      color: $black-down;
+    }
+  }
+}
+
+// toggle
+// opened
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  z-index: 2;
+  display: block;
+  width: 23px;
+  height: 22px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: $blue-basic;
+  transition: all 0.15s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 23px;
+    height: 5px;
+    background-color: $white-basic;
+  }
+
+  &::before {
+    top: 4px;
+  }
+
+  &::after {
+    top: 13px;
+  }
+
+  &:hover {
+    background-color: rgba(129, 179, 210, 0.6);
+  }
+
+  &:active {
+    background-color: rgba(129, 179, 210, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    .main-nav--closed .main-nav__item {
+      display: none;
+    }
+  }
+}
+
+// closed
+// .main-nav--opened .main-nav__toggle {
+//   position: absolute;
+//   top: 17px;
+//   right: 20px;
+//   z-index: 2;
+//   display: block;
+//   width: 22.2px;
+//   height: 22.2px;
+//   border: none;
+//   padding: 0;
+//   margin: 0;
+//   cursor: pointer;
+//   background-color: transparent;
+//   transition: all 0.15s ease-in-out;
+
+//   &::before,
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     right: 0;
+//     top: 10px;
+//     width: 22px;
+//     height: 3px;
+//     background-color: $white-basic;
+//   }
+
+//   &::before {
+//     transform: rotate(45deg);
+//   }
+
+//   &::after {
+//     transform: rotate(-45deg);
+//   }
+
+//   &:hover::before,
+//   &:hover::after {
+//     background-color: rgba(255, 255, 255, 0.6);
+//   }
+
+//   &:active::before,
+//   &:active::after {
+//     background-color: rgba(255, 255, 255, 0.3);
+//   }
+
+//   @media (min-width: $tablet-width) {
+//     display: none;
+//   }
+// }
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 22.2px;
+  height: 22.2px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url(../../img/icon/menu_close.svg);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

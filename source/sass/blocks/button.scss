@@ -1,0 +1,43 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 14.5px 0 17.5px;
+  background-color: $blue-basic;
+  color: $white-basic;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.238;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $blue-hover;
+  }
+  &:active {
+    background-color: $blue-down;
+    color: $white-down;
+  }
+  &:disabled {
+    background-color: $grey;
+  }
+
+  &--social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 48px;
+    padding: 0;
+    &:active path {
+      fill: $white-down;
+    }
+  }
+
+  &--reserve {
+    width: 280px;
+    @media (min-width: $tablet-width) {
+      width: 458px;
+    }
+  }
+}

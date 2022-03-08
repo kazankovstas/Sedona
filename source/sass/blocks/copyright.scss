@@ -1,0 +1,16 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.copyright__link {
+  display: flex;
+  transition: 0.3s;
+  &:hover path {
+    fill: $blue-basic;
+  }
+  &:active path {
+    fill: $black-down;
+  }
+}
