@@ -1,0 +1,276 @@
+// Поле ------------------------------------
+.field {
+  display: grid;
+  margin: 0 0 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &--radio {
+    margin-bottom: 21px;
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
+  }
+  &--checkbox {
+    margin-bottom: 54px;
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
+  }
+}
+
+// Поле в линию ----------------------------
+.field--row {
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 13px;
+}
+
+// Поле в колонку ---------------------------
+.field--column {
+  margin: 0 0 14px;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  & .field__label {
+    padding-left: 22px;
+    @media (min-width: $desktop-width) {
+      padding: 0;
+    }
+  }
+  @media (min-width: $tablet-width) {
+    margin: 0 0 25px 0;
+  }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: max-content 1fr;
+    gap: 16px;
+    align-items: center;
+    margin: 0;
+    &:first-child {
+      margin-right: 79px;
+    }
+  }
+}
+
+// Textarea -----------------------------------
+.field--textarea {
+  padding: 13px 23px 29px 21px;
+  margin: 0 auto;
+  min-height: 160px;
+  width: 100%;
+  background-color: $lightgrey;
+  border: none;
+  resize: none;
+  color: $black-basic;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.44;
+  &:focus::placeholder {
+    color: transparent;
+  }
+  &::placeholder {
+    color: $black-basic;
+  }
+}
+
+// Label --------------------------------------
+.field__label {
+  color: $black-accent;
+  &--accent {
+    text-transform: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.44;
+    color: $black-basic;
+  }
+}
+
+// Input --------------------------------------
+.field__input {
+  width: 100%;
+  padding: 18px 22px 14px 22px;
+  border: none;
+  background-color: $lightgrey;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.44;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  &:hover {
+    background-color: $grey;
+  }
+  &:focus {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 3px rgb(83, 155, 184);
+  }
+  &::placeholder {
+    color: $black-basic;
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+// Радиокнопка ----------------------------------
+.field__label--radio {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 48px;
+  margin-left: 78px;
+  cursor: pointer;
+  user-select: none;
+  padding-right: 20px;
+}
+
+.field__input--radio + .field__label--radio::before {
+  position: absolute;
+  content: "";
+  left: -74px;
+  top: 0px;
+  width: 48px;
+  height: 48px;
+  background-color: $lightgrey;
+  border-radius: 50%;
+}
+
+// Цвет при наведении -----------------------------------------
+.field__input--radio:hover + .field__label--radio::before {
+  background-color: $grey;
+}
+
+// Цвет при нажатии/фокусе ------------------------------------
+.field__input--radio:active + .field__label--radio::before,
+.field__input--radio:focus + .field__label--radio::before {
+  background-color: $darkgrey;
+}
+
+.field__input--radio:checked + .field__label--radio::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: -59px;
+  width: 18px;
+  height: 18px;
+  background-color: $black-accent;
+  border-radius: 50%;
+}
+
+// Чекбокс --------------------------------------
+.field__label--checkbox {
+  position: relative;
+  display: block;
+  margin-left: 78px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.field__input--checkbox + .field__label--checkbox::before {
+  position: absolute;
+  content: "";
+  left: -74px;
+  top: -10px;
+  width: 46px;
+  height: 46px;
+  background-color: $lightgrey;
+  border-radius: 5px;
+}
+
+.field__input--checkbox:checked + .field__label--checkbox::after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: -62px;
+  width: 23.13px;
+  height: 16.23px;
+  background-image: url(../../img/icon/checked.svg);
+}
+
+// Цвет при наведении -----------------------------------------
+.field__input--checkbox:hover + .field__label--checkbox::before {
+  background-color: $grey;
+}
+
+// Цвет обводки при фокусе
+.field__input--checkbox:focus + .field__label--checkbox::before {
+  outline: 3px solid rgb(83, 155, 184);
+}
+
+// Цвет при нажатии/фокусе ------------------------------------
+.field__input--checkbox:active + .field__label--checkbox::before {
+  background-color: $darkgrey;
+}
+
+// Контейнер для контактов -----------------------------------------------
+.field__contacts-container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.field__label--hide {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+// Контейнер чекбоксов на tablet-width -----------------------------------
+.field__checkbox-container {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-rows: repeat(2, 46px);
+    row-gap: 42px;
+    max-width: 70%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 46px;
+    max-width: 100%;
+  }
+}
+
+.field--checkbox:nth-child(1) {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.field--checkbox:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    grid-column: 2/2;
+    grid-row: 1/2;
+  }
+}
+
+// Контейнер для иконки в Contacts -------------------------------
+.field-tel__container {
+  display: grid;
+  grid-template-columns: 1fr 58px;
+}
+
+.field-icon {
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-image: url(../../img/icon/phone.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.field-icon--tel {
+  background-image: url(../../img/icon/phone.svg);
+}
+
+.field-icon--mail {
+  background-image: url(../../img/icon/mail.svg);
+}

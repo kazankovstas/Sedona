@@ -5,18 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sedona</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/icon/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/icon/favicon/apple.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <script src="js/main-nav.js" defer></script>
   </head>
   <body class="page__body">
     <div class="page__wrapper">
       <header class="page-header">
-        <a class="page-header__logo">
-          <img
-            src="img/Logo_Sedona.svg"
-            width=""
-            height=""
-            alt="Логотип Sedona"
-          />
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source
+              media="(min-width: 1200px)"
+              srcset="img/Logo_Sedona_desktop.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/Logo_Sedona_tablet.svg"
+            />
+            <img
+              src="img/Logo_Sedona.svg"
+              width=""
+              height=""
+              alt="Логотип Sedona"
+            />
+          </picture>
         </a>
         <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
@@ -28,10 +42,12 @@
                 <a class="main-nav__link link">Главная</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link link" href="#">Фото и видео</a>
+                <a class="main-nav__link link" href="catalog.html"
+                  >Фото и видео</a
+                >
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link link" href="#">Форма отзыва</a>
+                <a class="main-nav__link link" href="form.html">Форма отзыва</a>
               </li>
               <li class="main-nav__item">
                 <a class="main-nav__link link" href="#">HTML Academy</a>
@@ -39,24 +55,40 @@
             </ul>
           </div>
         </nav>
-        <div class="page-header__main-image"></div>
+        <div class="page-header__main-image">
+          <div class="page-header__pic-container">
+            <img
+              class="pic--welcome"
+              src="img/intro/welcome_mobile.svg"
+              alt=""
+            />
+            <img
+              class="pic--subtitle"
+              src="img/intro/subtitle_mobile.svg"
+              alt=""
+            />
+            <img class="pic--title" src="img/intro/title_mobile.svg" alt="" />
+            <img
+              class="pic--description"
+              src="img/intro/description_mobile.svg"
+              alt=""
+            />
+          </div>
+        </div>
       </header>
       <main class="page-main">
         <h1 class="visually-hidden">Седона — сайт для туристов!</h1>
-        <section class="intro">
-          <div class="intro__wrapper"></div>
+        <section class="header header__container">
+          <h2 class="header__title">
+            Седона - небольшой <br />
+            городок в Аризоне, заслуживающий&nbsp;большего!
+          </h2>
+          <p class="header__subtitle">
+            Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+          </p>
         </section>
         <section class="advantages">
           <h2 class="visually-hidden">Наши преимущества</h2>
-          <header class="header header--advantages">
-            <p class="header__title">
-              Седона - небольшой <br />
-              городок в Аризоне, заслуживающий&nbsp;большего!
-            </p>
-            <p class="header__subtitle">
-              Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
-            </p>
-          </header>
           <ol class="advantages__list">
             <li class="advantages__item advantages__item--pic">
               <div class="advantages__wrapper">
@@ -168,6 +200,17 @@
             </p>
           </header>
           <a class="button button--reserve">Найти гостиницу</a>
+          <div class="reserve__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002599.578252761!2d-112.93954089893026!3d34.47698881997869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1648888302545!5m2!1sru!2sru"
+              width="100%"
+              height="350px"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </section>
       </main>
       <footer class="footer footer__container">

@@ -1,0 +1,119 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.6s ease 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal--show {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+// Container ----------------------------------------------------------- Container
+.modal__container {
+  animation: bounce 1.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  &--error {
+    min-height: 280px;
+    @media (min-width: $tablet-width) {
+      width: 400px;
+    }
+  }
+  &--success {
+    min-height: 232px;
+    @media (min-width: $tablet-width) {
+      width: 640px;
+    }
+  }
+  @media (min-width: $tablet-width) {
+    min-height: 347px;
+  }
+}
+
+// Description --------------------------------------------------------- Description
+.modal__description {
+  padding: 40px 42px 22px;
+  @media (min-width: $tablet-width) {
+    padding: 50px 46px 25px;
+  }
+}
+
+.modal__title {
+  margin-bottom: 22px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal__subtitle {
+  text-align: center;
+  color: $black-accent;
+}
+
+// Button ---------------------------------------------------------------- Button
+.modal__button-container {
+  display: flex;
+  margin-bottom: 35px;
+  width: 100%;
+  &--success {
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    margin: 11px 0 0 0;
+    background-color: #f2f2f2;
+    @media (min-width: $tablet-width) {
+      padding: 44px 91px;
+    }
+  }
+}
+
+.modal__button {
+  height: 58px;
+  width: 180px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: $blue-basic;
+  color: $white-basic;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  &:hover {
+    background-color: $blue-hover;
+  }
+  &:active {
+    background-color: $blue-down;
+  }
+  @media (min-width: $tablet-width) {
+    width: 272px;
+  }
+  &--success {
+    width: 100%;
+    @media (min-width: $tablet-width) {
+      width: 458px;
+    }
+  }
+}

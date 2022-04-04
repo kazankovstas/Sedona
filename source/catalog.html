@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sedona</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/icon/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/icon/favicon/apple.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script src="js/main-nav.js" defer></script>
+  </head>
+  <body class="page__body">
+    <div class="page__wrapper">
+      <header class="page-header">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source
+              media="(min-width: 1200px)"
+              srcset="img/Logo_Sedona_desktop.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/Logo_Sedona_tablet.svg"
+            />
+            <img
+              src="img/Logo_Sedona.svg"
+              width=""
+              height=""
+              alt="Логотип Sedona"
+            />
+          </picture>
+        </a>
+        <nav class="main-nav main-nav--closed">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list main-nav__list--toggle">
+              <li class="main-nav__item main-nav__item--current">
+                <a class="main-nav__link link" href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link link" href="#">Фото и видео</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link link" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link link" href="#">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="page-header__main-image page-header__main-image--form">
+          <div class="page-header__pic-container">
+            <img class="pic--title" src="img/intro/title_mobile.svg" alt="" />
+          </div>
+        </div>
+      </header>
+      <main class="page-main page-main__catalog">
+        <h1 class="visually-hidden">Седона — сайт для туристов!</h1>
+        <section class="header header__container header__container--catalog">
+          <h2 class="header__title header__title--form">Фото и видео</h2>
+          <p class="header__subtitle">
+            Не можете решиться на путешествия из-за курса? Фотографии помогут
+            забыть вам о политике и экономике.
+          </p>
+        </section>
+        <section class="photo">
+          <div class="photo__wrapper">
+            <ul class="photo__list">
+              <li class="photo__item">
+                <div class="card">
+                  <picture class="pictures">
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo/photo-1-desktop.webp 1x,
+                        img/photo-1-desktop@2x.webp    2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/photo/photo-1-tablet.webp    1x,
+                        img/photo/photo-1-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo/photo-1-mobile.webp    1x,
+                        img/photo/photo-1-mobile@2x.webp 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo/photo-1-desktop.jpg    1x,
+                        img/photo/photo-1-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/photo/photo-1-tablet.jpg    1x,
+                        img/photo/photo-1-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="card__image card__image--large"
+                      src="img/photo/photo-1-mobile.jpg"
+                      srcset="img/photo/photo-1-mobile@2x.jpg 2x"
+                      alt="Дорога на закате"
+                    />
+                  </picture>
+                  <div class="card__description">
+                    <div class="card__info">
+                      <h2 class="card__title">Неродные просторы</h2>
+                      <p class="card__author">Автор фото: Борис</p>
+                    </div>
+                    <a class="card__like-container">
+                      <svg
+                        class="like-icon"
+                        width="23"
+                        height="21"
+                        viewBox="0 0 23 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.3"
+                          d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <p class="card__like">1350</p>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="photo__item">
+                <div class="card">
+                  <picture class="pictures">
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo/photo-2-desktop.webp    1x,
+                        img/photo/photo-2-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 460px) and (max-width: 1200px)"
+                      srcset="
+                        img/photo/photo-2-tablet.webp    1x,
+                        img/photo/photo-2-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo/photo-2-mobile.webp    1x,
+                        img/photo/photo-2-mobile@2x,webp 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo/photo-2-desktop.jpg    1x,
+                        img/photo/photo-2-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 460px) and (max-width: 1200px)"
+                      srcset="
+                        img/photo/photo-2-tablet.jpg    1x,
+                        img/photo/photo-2-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="card__image"
+                      src="img/photo/photo-2-mobile.jpg"
+                      srcset="img/photo/photo-2-mobile@2x.jpg 2x"
+                      alt="Кактус в горах"
+                    />
+                  </picture>
+                  <div class="card__description">
+                    <div class="card__info">
+                      <h2 class="card__title">Местная растительность</h2>
+                      <p class="card__author">Автор фото: Сергей</p>
+                    </div>
+                    <a class="card__like-container">
+                      <svg
+                        class="like-icon"
+                        width="23"
+                        height="21"
+                        viewBox="0 0 23 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.3"
+                          d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <p class="card__like">143</p>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="photo__item">
+                <div class="card">
+                  <picture class="pictures">
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo/photo-3-desktop.webp    1x,
+                        img/photo/photo-3-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 460px) and (max-width: 1200px)"
+                      srcset="
+                        img/photo/photo-3-tablet.webp    1x,
+                        img/photo/photo-3-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo/photo-3-mobile.webp    1x,
+                        img/photo/photo-3-mobile@2x.webp 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo/photo-3-desktop.jpg    1x,
+                        img/photo/photo-3-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 460px) and (max-width: 1200px)"
+                      srcset="
+                        img/photo/photo-3-tablet.jpg    1x,
+                        img/photo/photo-3-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="card__image"
+                      src="img/photo/photo-3-mobile.jpg"
+                      srcset="img/photo/photo-3-mobile@2x.jpg 2x"
+                      alt="Дорога в лесу"
+                    />
+                  </picture>
+                  <div class="card__description card__description--accent">
+                    <div class="card__info">
+                      <h2 class="card__title">Дорога на север</h2>
+                      <p class="card__author">Автор фото: Петр</p>
+                    </div>
+                    <a class="card__like-container">
+                      <svg
+                        class="like-icon"
+                        width="23"
+                        height="21"
+                        viewBox="0 0 23 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.3"
+                          d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <p class="card__like">96</p>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="photo__item">
+                <div class="card">
+                  <picture class="pictures">
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo/photo-4-desktop.webp    1x,
+                        img/photo/photo-4-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 460px) and (max-width: 1200px)"
+                      srcset="
+                        img/photo/photo-4-tablet.webp    1x,
+                        img/photo/photo-4-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo/photo-4-mobile.webp    1x,
+                        img/photo/photo-4-mobile@2x.webp 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo/photo-4-desktop.jpg    1x,
+                        img/photo/photo-4-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 460px) and (max-width: 1200px)"
+                      srcset="
+                        img/photo/photo-4-tablet.jpg    1x,
+                        img/photo/photo-4-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="card__image"
+                      src="img/photo/photo-4-mobile.jpg"
+                      srcset="img/photo/photo-4-mobile@2x.jpg 2x"
+                      alt="Каменный мост"
+                    />
+                  </picture>
+                  <div class="card__description">
+                    <div class="card__info">
+                      <h2 class="card__title">Мост дьявола</h2>
+                      <p class="card__author">Автор фото: Антон</p>
+                    </div>
+                    <a class="card__like-container">
+                      <svg
+                        class="like-icon"
+                        width="23"
+                        height="21"
+                        viewBox="0 0 23 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.3"
+                          d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
+                          fill="white"
+                        />
+                      </svg>
+                      <p class="card__like">254</p>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="header header__container header__container--video">
+          <h2 class="header__title header__title--form">
+            Все еще сомневаетесь?
+          </h2>
+          <p class="header__subtitle">
+            Смотрите видеопрезентацию и скорее за билетами, пока они не
+            подорожали в очередной раз!
+          </p>
+        </section>
+        <section class="video">
+          <picture>
+            <source
+              type="image/webp"
+              media="(min-width: 1200px)"
+              srcset="
+                img/photo/video-desktop.webp    1x,
+                img/photo/video-desktop@2x.webp 2x
+              "
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="
+                img/photo/video-tablet.webp    1x,
+                img/photo/video-tablet@2x.webp 2x
+              "
+            />
+            <source
+              type="image/webp"
+              srcset="
+                img/photo/video-mobile.webp    1x,
+                img/photo/video-mobile@2x.webp 2x
+              "
+            />
+
+            <source
+              media="(min-width: 1200px)"
+              srcset="
+                img/photo/video-desktop.jpg    1x,
+                img/photo/video-desktop@2x.jpg 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                img/photo/video-tablet.jpg    1x,
+                img/photo/video-tablet@2x.jpg 2x
+              "
+            />
+            <img
+              class="video__image"
+              src="img/photo/video-mobile.jpg"
+              srcset="img/photo/video-mobile@2x.jpg 2x"
+              alt="Превью видео"
+            />
+          </picture>
+          <div class="video__player player">
+            <div class="player__range-wrapper">
+              <input class="player__range" type="range" value="25" />
+            </div>
+            <div class="player__button-wrapper">
+              <div class="player__button-container">
+                <a class="player__button player__button--replay">
+                  <svg
+                    width="16"
+                    height="20"
+                    viewBox="0 0 16 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 4V0L3 5L8 10V6C11.3 6 14 8.7 14 12C14 15.3 11.3 18 8 18C4.7 18 2 15.3 2 12H0C0 16.4 3.6 20 8 20C12.4 20 16 16.4 16 12C16 7.6 12.4 4 8 4Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+                <div class="player__buttons">
+                  <a class="player__button player__button--subtitles">
+                    <svg
+                      width="32"
+                      height="20"
+                      viewBox="0 0 32 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M29 0H3C1.3 0 0 1.3 0 3V17C0 18.7 1.3 20 3 20H29C30.7 20 32 18.7 32 17V3C32 1.3 30.7 0 29 0ZM14.4 15.9C13.9 16 13.3 16 12.7 16C12 16 11.3 15.9 10.7 15.7C10.1 15.5 9.5 15.1 9.1 14.7C8.7 14.3 8.3 13.6 8 12.8C7.7 12 7.6 11.1 7.6 10C7.6 8.9 7.8 7.9 8.1 7.1C8.4 6.3 8.8 5.7 9.3 5.2C9.8 4.7 10.4 4.4 11 4.2C11.5 4.1 12.2 4 12.8 4C13.5 4 14 4 14.5 4.1C15 4.2 15.3 4.3 15.6 4.4L15.2 6.3C14.9 6.2 14.6 6.1 14.3 6C13.9 6 13.5 6 13 6C12.1 6 11.4 6.3 10.8 7C10.2 7.7 10 8.7 10 10C10 10.6 10.1 11.1 10.2 11.6C10.3 12.1 10.5 12.5 10.8 12.9C11.1 13.2 11.4 13.5 11.8 13.7C12.2 13.9 12.7 14 13.2 14C13.7 14 14.1 14 14.5 13.9C14.8 13.8 15.1 13.7 15.4 13.5L15.9 15.3C15.4 15.6 14.9 15.7 14.4 15.9ZM23.1 15.9C22.6 16 22 16 21.4 16C20.7 16 20 15.9 19.4 15.7C18.8 15.5 18.2 15.1 17.8 14.7C17.3 14.2 16.9 13.6 16.7 12.8C16.4 12 16.3 11.1 16.3 10C16.3 8.9 16.5 7.9 16.8 7.1C17.1 6.3 17.5 5.7 18 5.2C18.5 4.7 19.1 4.4 19.7 4.2C20.2 4.1 20.9 4 21.5 4C22.2 4 22.7 4 23.2 4.1C23.7 4.2 24 4.3 24.3 4.4L23.9 6.3C23.6 6.2 23.3 6.1 23 6C22.6 6 22.2 6 21.7 6C20.8 6 20.1 6.3 19.5 7C18.9 7.7 18.7 8.7 18.7 10C18.7 10.6 18.8 11.1 18.9 11.6C19 12.1 19.2 12.5 19.5 12.9C19.8 13.2 20.1 13.5 20.5 13.7C20.9 13.9 21.4 14 21.9 14C22.4 14 22.8 14 23.2 13.9C23.5 13.8 23.8 13.7 24.1 13.5L24.6 15.3C24.1 15.6 23.6 15.7 23.1 15.9Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                  <a class="player__button player__button--fullscreen">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0V3V6H3V3H6V0H3H0Z" fill="white" />
+                      <path d="M3 14H0V17V20H3H6V17H3V14Z" fill="white" />
+                      <path d="M17 0H14V3H17V6H20V3V0H17Z" fill="white" />
+                      <path d="M17 17H14V20H17H20V17V14H17V17Z" fill="white" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <section class="info">
+          <div class="info__wrapper">
+            <div class="info__column">
+              <h2 class="info__title">I am Stanislav Kazankov</h2>
+              <p class="info__about">
+                I am a novice web developer from Penza. I am currently studying
+                at the HTML Academy. I have finished studying HTML/CSS, I am
+                currently studying JavaScript and along the way I am looking for
+                a job as an HTML versifier
+              </p>
+              <dl>
+                <div class="table-row">
+                  <dt>Phone</dt>
+                  <dd class="descr">
+                    <a href="tel:+79374338833">+7 (937) 433-88-33</a>
+                  </dd>
+                </div>
+                <div class="table-row">
+                  <dt>E-Mail</dt>
+                  <dd class="descr">
+                    <a href="mailto:kazankovstas.jb@gmail.com"
+                      >kazankovstas.jb@gmail.com</a
+                    >
+                  </dd>
+                </div>
+                <div class="table-row">
+                  <dt>Social</dt>
+                  <dd class="descr">
+                    <div class="social-dd">
+                      <a href="">
+                        <svg
+                          width="9"
+                          height="18"
+                          viewBox="0 0 9 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.50865 3.19324H9V0H6.02076C2.76125 0.171067 1.59862 2.27138 2.07612 5.81626H0V9.15206H2.07612V18H6.02076V9.15206H8.97924V5.81626H6.01038C5.98962 4.81837 5.96886 3.52587 6.50865 3.19324Z"
+                            fill="#D22856"
+                          />
+                        </svg>
+                      </a>
+                      <a href="">
+                        <svg
+                          width="18"
+                          height="14"
+                          viewBox="0 0 18 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.5641 0.168904C12.2458 -0.0461515 12.9837 -0.0560928 13.6719 0.140507C14.3602 0.337107 14.9633 0.730138 15.3947 1.26319C16.1053 1.05385 16.8055 0.815959 17.5263 0.606617C17.5164 0.925848 17.4299 1.23907 17.2732 1.52372C17.1165 1.80837 16.8935 2.05738 16.6201 2.2528C16.8726 2.27877 17.1281 2.25112 17.3673 2.17197C17.6064 2.09281 17.8228 1.96424 18 1.79606C17.901 2.20987 17.6999 2.59695 17.4123 2.92708C17.1247 3.2572 16.7585 3.52144 16.3421 3.69916C16.095 9.96988 12.9748 14.1662 5.65332 13.9949H5.14874C4.70595 13.9949 0.731121 13.5667 0 12.2441C1.75201 12.4899 3.53888 12.0976 4.98398 11.1498C3.95423 10.8643 2.13158 10.7026 1.82265 8.40934C2.2108 8.54337 2.6321 8.57306 3.03776 8.49498C1.76087 7.70519 0.339817 7.0391 0.422197 4.99327C0.819634 5.29882 1.3269 5.45507 1.84325 5.43098C1.10183 5.20261 -0.24714 2.30989 0.895881 0.825474C2.82151 2.54778 4.86041 4.17493 8.48512 4.3367C8.71167 2.20522 9.68993 0.777896 11.5641 0.168904Z"
+                            fill="#D22856"
+                          />
+                        </svg>
+                      </a>
+                      <a href="">
+                        <svg
+                          width="15"
+                          height="13"
+                          viewBox="0 0 15 13"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.83356 12.8089C1.64633 12.9278 1.42471 12.9941 1.19626 12.9996C0.967817 13.0051 0.74263 12.9495 0.548717 12.8398C0.354804 12.7301 0.200724 12.571 0.105646 12.3824C0.010569 12.1938 -0.0213097 11.984 0.0139762 11.779V1.22097C-0.0213097 1.01605 0.010569 0.806234 0.105646 0.617628C0.200724 0.429021 0.354804 0.269949 0.548717 0.1602C0.74263 0.0504516 0.967817 -0.00512927 1.19626 0.000372265C1.42471 0.0058738 1.64633 0.0722149 1.83356 0.191142L14.2333 5.69284C15.2556 6.13817 15.2556 6.86183 14.2333 7.30716L1.83356 12.8089Z"
+                            fill="#D22856"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div class="info__photo"></div>
+          </div>
+        </section>
+        <section class="portfolio">
+          <div class="portfolio__wrapper">
+            <ul class="portfolio-list">
+              <li class="portfolio-item">
+                <a
+                  class="portfolio-card"
+                  href="https://kazankovstas.github.io/project-Pink/"
+                  target="_blank"
+                >
+                  <div class="picture-container">
+                    <div class="picture-3"></div>
+                  </div>
+                  <h2 class="portfolio-card__title">Project "How to learn"</h2>
+                  <p class="portfolio-card__description">October, 2021</p>
+                </a>
+              </li>
+              <li class="portfolio-item">
+                <a
+                  class="portfolio-card"
+                  href="https://kazankovstas.github.io/project-Pink/"
+                  target="_blank"
+                >
+                  <div class="picture-container">
+                    <div class="picture-2"></div>
+                  </div>
+                  <h2 class="portfolio-card__title">Project "Mesto"</h2>
+                  <p class="portfolio-card__description">December, 2021</p>
+                </a>
+              </li>
+              <li class="portfolio-item">
+                <a
+                  class="portfolio-card"
+                  href="https://kazankovstas.github.io/project-Pink/"
+                  target="_blank"
+                >
+                  <div class="picture-container">
+                    <div class="picture"></div>
+                  </div>
+                  <h2 class="portfolio-card__title">Project "PINK"</h2>
+                  <p class="portfolio-card__description">February, 2022</p>
+                </a>
+              </li>
+              <li class="portfolio-item">
+                <a
+                  class="portfolio-card"
+                  href="https://kazankovstas.github.io/project-Pink/"
+                  target="_blank"
+                >
+                  <div class="picture-container">
+                    <div class="picture-4"></div>
+                  </div>
+                  <h2 class="portfolio-card__title">
+                    Project "Russian Travel"
+                  </h2>
+                  <p class="portfolio-card__description">November, 2021</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section> -->
+      </main>
+      <footer class="footer footer__container">
+        <p class="footer__item">#VisitSedona</p>
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="button button--social">
+                <span class="visually-hidden">Твиттер</span>
+                <svg
+                  width="18"
+                  height="15"
+                  viewBox="0 0 18 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.3 0.166728C13 -0.333272 14.4 0.366728 15 1.26673C15.7 1.06673 16.4 0.766728 17.1 0.566728C17.1 1.36673 16.6 2.06673 16.2 2.26673C16.9 2.46673 17.5 1.76673 17.5 1.76673C17.3 2.76673 16.5 3.46673 15.9 3.76673C15.7 10.3667 12.6 14.7667 5.5 14.5667C5 14.5667 5.6 14.5667 5 14.5667C4.6 14.5667 0.7 14.1667 0 12.7667C2.3 12.9667 4 12.3667 4.8 11.6667C3.8 11.3667 2 11.1667 1.7 8.76673C2.1 8.86673 2.3 8.96673 3 8.86673C1.8 8.06673 0.4 7.36673 0.5 5.16673C0.8 5.46673 1.6 5.66673 1.9 5.66673C1.2 5.46673 -0.1 2.36673 1 0.866728C2.9 2.66673 4.8 4.36673 8.4 4.56673C8.5 2.26673 9.5 0.766728 11.3 0.166728Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="button button--social">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg
+                  width="9"
+                  height="19"
+                  viewBox="0 0 9 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.3 3.4C7.1 3.4 7.9 3.4 8.7 3.4C8.7 2.3 8.7 1.2 8.7 0C7.7 0 6.8 0 5.8 0C2.7 0.2 1.5 2.4 1.9 6.1H0V9.6H2C2 12.7 2 15.8 2 18.9C3.3 18.9 4.6 18.9 5.8 18.9C5.8 15.8 5.8 12.7 5.8 9.6H8.7V6.1H5.8C5.8 5.1 5.8 3.7 6.3 3.4Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="button button--social">
+                <span class="visually-hidden">YouTube</span>
+                <svg
+                  width="20"
+                  height="14"
+                  viewBox="0 0 20 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8V11.1C0 12.7 1.3 14 2.8 14H17.1C18.7 14 19.9 12.7 19.9 11.2V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7L7 10.4Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__copyright copyright">
+          <p class="copyright__author">Разработано</p>
+          <a
+            class="copyright__link"
+            target="_blank"
+            href="https://up.htmlacademy.ru/profession/frontender-lite/1/lite-adaptive"
+          >
+            <span class="visually-hidden">Логотип HTML академии</span>
+            <svg
+              width="27"
+              height="35"
+              viewBox="0 0 27 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
+                fill="black"
+              />
+            </svg>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

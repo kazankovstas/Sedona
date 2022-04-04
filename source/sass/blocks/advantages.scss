@@ -4,7 +4,12 @@
   align-items: center;
 }
 
-// LIST
+// Wrapper -----------------------------------------
+.advantages__wrapper {
+  padding: 40px 33px 41px;
+}
+
+// List --------------------------------------------
 .advantages__list {
   list-style: none;
   margin: 0;
@@ -14,64 +19,12 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: 256px 330px repeat(2, 256px);
   }
 }
 
-// WRAPPER
-.advantages__wrapper {
-  padding: 40px 33px 41px;
-  border: 1px solid tomato;
-}
-
-// ITEM
+// Item --------------------------------------------
 .advantages__item {
-  // display: flex;
-  // flex-flow: column wrap;
-  // justify-content: flex-start;
-  // gap: 30px;
-  // min-height: 191px;
   counter-increment: advantages;
-}
-
-.advantages__item--pic {
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column: 1/-1;
-  }
-}
-
-.advantages__item--pic::before {
-  display: block;
-  content: "";
-  // height: 256px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
-  grid-column: span 2;
-}
-
-.advantages__item--pic:nth-child(1)::before {
-  background-image: url(../../img/city_mobile.jpg);
-  @media (min-width: $tablet-width) {
-    background-image: url(../../img/city_tablet.jpg);
-  }
-  @media (min-width: $desktop-width) {
-    background-image: url(../../img/city_desktop.jpg);
-  }
-}
-
-.advantages__item--pic:nth-child(2):before {
-  background-image: url(../../img/bridge_mobile.jpg);
-  order: 1;
-  @media (min-width: $tablet-width) {
-    background-image: url(../../img/bridge_tablet.jpg);
-  }
-  @media (min-width: $desktop-width) {
-    background-image: url(../../img/bridge_desktop.jpg);
-  }
 }
 
 .advantages__item:nth-child(1),
@@ -85,6 +38,86 @@
   background-color: $lightgrey;
 }
 
+// Серые блоки №4 №5 №6 --------------------------------
+.advantages__item--accent {
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    &:not(:last-child)::before {
+      position: absolute;
+      display: block;
+      content: "";
+      height: 1px;
+      background-color: #d6d6d6;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+    }
+  }
+}
+
+.advantages__item--pic {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1/-1;
+  }
+}
+
+.advantages__item--pic::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 260px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (min-width: $tablet-width) {
+    grid-column: span 2;
+    height: auto;
+  }
+}
+
+.advantages__item--pic:nth-child(1)::before {
+  background-image: url(../../img/city_mobile.jpg);
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/city_mobile@2x.jpg");
+  }
+  @media (min-width: $tablet-width) {
+    background-image: url(../../img/city_tablet.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/city_tablet@2x.jpg");
+    }
+  }
+  @media (min-width: $desktop-width) {
+    background-image: url(../../img/city_desktop.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/city_desktop@2x.jpg");
+    }
+  }
+}
+
+.advantages__item--pic:nth-child(2):before {
+  background-image: url(../../img/bridge_mobile.jpg);
+  order: 1;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/bridge_mobile@2x.jpg");
+  }
+  @media (min-width: $tablet-width) {
+    background-image: url(../../img/bridge_tablet.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/bridge_tablet@2x.jpg");
+    }
+  }
+  @media (min-width: $desktop-width) {
+    background-image: url(../../img/bridge_desktop.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/bridge_desktop@2x.jpg");
+    }
+  }
+}
+
+// Title ----------------------------------------------
 .advantages__title {
   text-transform: uppercase;
   color: $black-basic;
@@ -104,10 +137,10 @@
   color: $white-basic;
 }
 
+// Description -------------------------------------
 .advantages__description {
   text-transform: uppercase;
   color: $black-basic;
-  margin: 0;
   padding: 0 0 24px 0;
   text-align: center;
   font-size: 16px;
@@ -115,7 +148,6 @@
   font-weight: 400;
 
   @media (min-width: $tablet-width) {
-    // padding: 0 0 42px 0;
     padding: 0 0 0 0;
   }
 }
@@ -130,32 +162,35 @@
   color: $white-basic;
 }
 
-// CITY
+// City ---------------------------------------------
 .city-advantages {
   background-color: #fff;
   grid-column: 1/-1;
 }
 
+// City-List ----------------------------------------
 .city-advantages__list {
   position: relative;
   list-style: none;
   margin: 0 auto;
-  padding: 35px 11px 0 69px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: 330px;
-    padding: 0;
   }
 }
 
+// City-Item ------------------------------------------
 .city-advantages__item {
   display: flex;
   flex-flow: column wrap;
-  padding: 57px 28px 75px;
-  align-items: center;
-  border: 1px solid tomato;
+  align-items: flex-start;
+  padding: 35px 11px 26px 69px;
+
+  @media (min-width: $tablet-width) {
+    padding: 57px 28px 75px;
+    align-items: center;
+  }
 
   &:nth-child(2) {
     @media (min-width: $tablet-width) {
@@ -164,24 +199,7 @@
   }
 }
 
-// Серые блоки №4 №5 №6
-.advantages__item--accent {
-  position: relative;
-
-  @media (max-width: $tablet-width) {
-    &:not(:last-child)::before {
-      position: absolute;
-      display: block;
-      content: "";
-      height: 1px;
-      background-color: #d6d6d6;
-      bottom: 0;
-      left: 20px;
-      right: 20px;
-    }
-  }
-}
-
+// City-Title -----------------------------------
 .city-advantages__title {
   display: flex;
   flex-flow: column wrap;
@@ -196,29 +214,56 @@
 .city-advantages__title::before {
   content: "";
   display: block;
-  width: 76px;
-  height: 76px;
+  width: 40px;
+  height: 38px;
   background-repeat: no-repeat;
-  background-position: center center;
-  margin-bottom: 26px;
+  background-position: left left;
+  position: absolute;
+  margin-top: -10px;
+  left: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 26px;
+    position: static;
+  }
 }
 
 .city-advantages__title--house::before {
-  background-image: url(../../img/icon/house-tablet.svg);
+  background-image: url(../../img/icon/house_mobile.svg);
+  @media (min-width: $tablet-width) {
+    background-image: url(../../img/icon/house-tablet.svg);
+  }
 }
 
 .city-advantages__title--gift::before {
-  background-image: url(../../img/icon/gift-tablet.svg);
+  background-image: url(../../img/icon/gift_mobile.svg);
+  @media (min-width: $tablet-width) {
+    background-image: url(../../img/icon/gift-tablet.svg);
+  }
 }
 
 .city-advantages__title--food::before {
-  background-image: url(../../img/icon/burger-tablet.svg);
+  background-image: url(../../img/icon/burger_mobile.svg);
+  @media (min-width: $tablet-width) {
+    background-image: url(../../img/icon/burger-tablet.svg);
+  }
 }
 
+// City-Description -------------------------------------------
 .city-advantages__description {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.5;
-  text-align: center;
+  text-align: start;
   padding: 26px 0 0;
+  max-width: 240px;
+  br {
+    display: none;
+  }
+  @media (min-width: $tablet-width) {
+    width: auto;
+    text-align: center;
+  }
 }

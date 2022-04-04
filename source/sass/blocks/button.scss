@@ -3,6 +3,7 @@
   vertical-align: middle;
   text-align: center;
   padding: 14.5px 0 17.5px;
+  border: none;
   background-color: $blue-basic;
   color: $white-basic;
   font-weight: 700;
@@ -36,8 +37,20 @@
 
   &--reserve {
     width: 280px;
+    margin-bottom: 49px;
     @media (min-width: $tablet-width) {
       width: 458px;
+      margin-bottom: 58px;
+    }
+    @media (min-width: $desktop-width) {
+      margin-bottom: 66px;
+    }
+  }
+
+  &--form {
+    padding: 18.5px 32px 13.5px;
+    @media (min-width: $desktop-width) {
+      padding: 18.5px 132px 13.5px;
     }
   }
 }

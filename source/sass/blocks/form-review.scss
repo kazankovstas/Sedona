@@ -1,0 +1,22 @@
+.form-review {
+  padding: 0;
+}
+
+// Контейнер для кнопки
+.form-review__button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 48px 0;
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    justify-content: space-between;
+  }
+}
+
+.form-review__required-fields {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
