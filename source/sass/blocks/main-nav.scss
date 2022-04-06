@@ -54,6 +54,11 @@
   transition: 0.3s;
   display: block;
   padding: 7.5px 0;
+  &:focus {
+    box-shadow: inset 0 0 2px 3px rgb(83, 155, 184);
+    border: none;
+    outline: none;
+  }
   &:hover {
     background-color: $blue-hover;
   }

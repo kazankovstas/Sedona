@@ -7,10 +7,11 @@
 .copyright__link {
   display: flex;
   transition: 0.3s;
-  &:hover path {
-    fill: $blue-basic;
+  color: $black-basic;
+  &:hover {
+    color: $blue-basic;
   }
-  &:active path {
-    fill: $black-down;
+  &:active {
+    color: $black-down;
   }
 }

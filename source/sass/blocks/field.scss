@@ -65,6 +65,11 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.44;
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 2px 3px rgb(83, 155, 184);
+  }
   &:focus::placeholder {
     color: transparent;
   }
@@ -105,7 +110,7 @@
   }
   &:focus {
     background-color: transparent;
-    box-shadow: inset 0 0 0 3px rgb(83, 155, 184);
+    box-shadow: inset 0 0 2px 3px rgb(83, 155, 184);
   }
   &::placeholder {
     color: $black-basic;
@@ -113,6 +118,11 @@
   &:focus::placeholder {
     color: transparent;
   }
+}
+
+// Убрать стрелочки в Мозилле
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 // Радиокнопка ----------------------------------
@@ -197,7 +207,7 @@
 
 // Цвет обводки при фокусе
 .field__input--checkbox:focus + .field__label--checkbox::before {
-  outline: 3px solid rgb(83, 155, 184);
+  box-shadow: inset 0 0 2px 3px rgb(83, 155, 184);
 }
 
 // Цвет при нажатии/фокусе ------------------------------------

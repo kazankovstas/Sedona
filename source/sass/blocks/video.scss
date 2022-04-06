@@ -50,10 +50,14 @@
 .player__range {
   margin: 0 auto;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   outline: none;
   width: 84%;
   height: 3px;
   background-color: rgba($color: #ffffff, $alpha: 0.2);
+  cursor: pointer;
+  transition: 0.2s;
   @media (min-width: $tablet-width) {
     width: 60%;
     margin: 0 166px 0 93px;
@@ -64,8 +68,11 @@
   }
 }
 
+// Chrome
 .player__range::-webkit-slider-thumb {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -73,9 +80,30 @@
   cursor: pointer;
 }
 
-.player__range::-webkit-slider-thumb:hover,
-.player__range::-webkit-slider-thumb:active {
-  background: $blue-basic;
+// Mozilla
+.player__range::-moz-range-thumb {
+  background: white;
+  width: 13px;
+  height: 13px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.player__range {
+  &::-moz-range-thumb:hover {
+    background: $blue-basic;
+  }
+  &::-moz-range-thumb:active {
+    background: $blue-down;
+  }
+  &::-webkit-slider-thumb:hover {
+    background: $blue-basic;
+  }
+  &::-webkit-slider-thumb:active {
+    background: $blue-down;
+  }
 }
 // ---------------------------------------------------------------
 
@@ -121,38 +149,54 @@
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: transparent;
   background-repeat: no-repeat;
   transition: 0.3s;
-  &--replay path,
-  &--subtitles path,
-  &--fullscreen path {
-    fill: $grey-accent;
+  &--replay,
+  &--subtitles,
+  &--fullscreen {
+    color: $grey-accent;
   }
-  &--replay:hover path,
-  &--subtitles:hover path,
-  &--fullscreen:hover path {
-    fill: $black-accent;
+  &--replay:hover,
+  &--subtitles:hover,
+  &--fullscreen:hover {
+    color: $black-accent;
   }
-  &--replay:active path,
-  &--subtitles:active path,
-  &--fullscreen:active path {
-    fill: $black-accent-down;
+  &--replay:active,
+  &--subtitles:active,
+  &--fullscreen:active {
+    color: $black-accent-down;
   }
   @media (min-width: $tablet-width) {
-    &--replay path,
-    &--subtitles path,
-    &--fullscreen path {
-      fill: $white-basic;
+    &--replay,
+    &--subtitles,
+    &--fullscreen {
+      color: $white-basic;
     }
-    &--replay:hover path,
-    &--subtitles:hover path,
-    &--fullscreen:hover path {
-      fill: $white-hover;
+    &--replay:hover,
+    &--subtitles:hover,
+    &--fullscreen:hover {
+      color: $white-hover;
     }
-    &--replay:active path,
-    &--subtitles:active path,
-    &--fullscreen:active path {
-      fill: $white-down;
+    &--replay:active,
+    &--subtitles:active,
+    &--fullscreen:active {
+      color: $white-down;
     }
+  }
+}
+
+.lala {
+  width: 800px;
+  height: 600px;
+  background-color: rgb(224, 206, 224);
+  margin: 0 auto;
+}
+
+.ccilocka {
+  display: inline;
+  color: aqua;
+  &:hover {
+    color: red;
   }
 }

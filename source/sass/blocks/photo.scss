@@ -4,6 +4,7 @@
 }
 
 .card__title {
+  font-size: 14px;
   @media (min-width: $desktop-width) {
     color: $white-basic;
   }
@@ -32,29 +33,28 @@
   }
 }
 
-// Like ---------------------------------------------
 .card__like-container {
   display: flex;
   gap: 9px;
   margin-bottom: 21px;
   width: max-content;
   cursor: pointer;
-  &:hover path {
-    fill: $black-basic;
+  &:hover .like-icon {
+    color: $black-basic;
   }
-  &:active path {
-    fill: $black-accent-down;
+  &:active .like-icon {
+    color: $black-accent-down;
   }
   @media (min-width: $tablet-width) {
     padding: 10px 0 10px 20px;
     margin: 0;
   }
   @media (min-width: $desktop-width) {
-    &:hover path {
-      fill: $blue-basic;
+    &:hover .like-icon {
+      color: $blue-basic;
     }
-    &:active path {
-      fill: $blue-down;
+    &:active .like-icon {
+      color: $blue-down;
     }
   }
 }
@@ -67,11 +67,12 @@
   }
 }
 
-.like-icon path {
-  fill: $black-down;
-  opacity: 1;
+.like-icon {
+  color: $black-down;
+  opacity: 0.5;
   @media (min-width: $desktop-width) {
-    fill: white;
+    color: $white-basic;
+    opacity: 1;
   }
 }
 
