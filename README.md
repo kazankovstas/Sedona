@@ -14,6 +14,6 @@ Sedona - проект, представляющий собой сайт для �
 
 <br />
 <br />
-<img src="source/img/readme/sedona.gif">
+![til](source/img/readme/sedona.gif)
 
 <img src="source/img/readme/sedona-2.png">
