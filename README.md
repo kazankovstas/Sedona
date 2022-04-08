@@ -1,6 +1,6 @@
 # SEDONA
 
-<img src="source/img/readme/sedona.gif">
+<img src="source/img/readme/sedona-1.png">
 <a href="https://kazankovstas.github.io/project-Pink/index.html">Ссылка на проект</a>
 
 
@@ -14,5 +14,6 @@ Sedona - проект, представляющий собой сайт для �
 
 <br />
 <br />
+<img src="source/img/readme/sedona.gif">
 
 <img src="source/img/readme/sedona-2.png">
