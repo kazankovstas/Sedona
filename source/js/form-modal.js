@@ -1,5 +1,6 @@
 let isStorageSupport = true;
 let storage = "";
+const modalForm = document.querySelector(".modal");
 const form = document.querySelector(".form");
 const firstName = document.querySelector("[name=name]");
 const secondName = document.querySelector("[name=surname]");
@@ -28,4 +29,14 @@ formButtonError.addEventListener("click", function (evt) {
 formButtonSuccess.addEventListener("click", function (evt) {
   evt.preventDefault();
   successModal.classList.remove("modal--show");
+});
+
+// Закрытие попапа клавишей Esc
+window.addEventListener("keydown", function (evt) {
+  if (evt.key === "Escape") {
+    if (modalForm.classList.contains("modal--show")) {
+      evt.preventDefault();
+      modalForm.classList.remove("modal--show");
+    }
+  }
 });

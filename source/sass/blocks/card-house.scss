@@ -1,0 +1,171 @@
+.cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-house {
+  border-radius: 40px;
+  overflow: hidden;
+  width: 280px;
+  margin: 0 auto 30px;
+  box-shadow: 3px 0 21px 3px #929292;
+  transition: 0.3s;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 30px;
+    width: 100%;
+    padding: 30px 35px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 2px solid #eee;
+    &:hover {
+      background: linear-gradient(to right, #c3cdec, #eceef5);
+    }
+  }
+  @media (min-width: $desktop-width) {
+    gap: 30px;
+    padding: 30px 75px;
+  }
+}
+
+.card-house__image {
+  width: 280px;
+  height: 190px;
+  object-fit: cover;
+  @media (min-width: $tablet-width) {
+    width: 260px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 135px;
+    height: auto;
+  }
+}
+
+.card-house__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// Текстовые блоки
+.card-house__title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+  }
+}
+
+.card-house__text {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 21px;
+  color: $black-accent;
+  @media (min-width: $tablet-width) {
+    justify-content: start;
+    text-transform: uppercase;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.card-house__button {
+  padding: 8px 0;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+  border: none;
+  &--price {
+    background-color: rgba(4, 139, 110, 0.3);
+    &:hover {
+      background-color: rgba(4, 139, 110, 0.5);
+    }
+    &:active {
+      background-color: rgba(4, 139, 110, 0.7);
+    }
+  }
+  @media (min-width: $tablet-width) {
+    &--price {
+      background-color: $current;
+      &:hover {
+        background-color: $current-hover;
+      }
+      &:active {
+        background-color: $current-down;
+      }
+    }
+  }
+}
+
+.card-house__type,
+.card-house__price {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 6px 12px;
+  margin: 0 10px;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
+
+.card-house__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    min-width: 230px;
+  }
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card-house__raiting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    gap: 45px;
+  }
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.card-house__raiting-value {
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: $white-basic;
+  width: 100%;
+  text-align: center;
+  @media (min-width: $tablet-width) {
+    text-align: end;
+    background-color: $current;
+  }
+}

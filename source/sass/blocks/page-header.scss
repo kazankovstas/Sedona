@@ -4,6 +4,9 @@
   flex-flow: column wrap;
   background-color: $white-basic;
   font-size: 0;
+  &--hotels {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  }
 }
 
 // logo

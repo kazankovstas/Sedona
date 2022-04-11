@@ -1,0 +1,140 @@
+.sorting {
+  padding: 12.5px 22px 32px;
+  color: $white-basic;
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.sorting__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  margin: 0 auto;
+  padding: 12.5px 22px 32px;
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 72px;
+    border-radius: 0;
+    padding: 30px 35px;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    border-bottom: 2px solid #eeeeee;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 30px 75px;
+    gap: 80px;
+  }
+}
+
+.sorting__type {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.sorting__list-container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  @media (min-width: $desktop-width) {
+    gap: 56px;
+  }
+}
+
+.sorting__title {
+  margin-bottom: 24.5px;
+  @media (max-width: 360px) {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 5px 20px;
+  }
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: $black-basic;
+  }
+}
+
+.sorting__title,
+.sorting__heading {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  @media (min-width: $tablet-width) {
+    color: $black-basic;
+  }
+}
+
+.sorting__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style: none;
+  margin-bottom: 24.5px;
+  @media (max-width: 360px) {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 5px 20px;
+  }
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    border: none;
+    gap: 32px;
+  }
+}
+
+.sorting__item {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+  &--current {
+    color: $blue-basic;
+    text-decoration: underline;
+  }
+}
+
+.sorting__button-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 360px) {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 5px 20px;
+  }
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 0;
+  }
+}
+
+.sorting__button {
+  width: 11px;
+  height: 10px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url(../../img/hotels/btn-down.svg);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+  &--up {
+    transform: rotate(180deg);
+  }
+}

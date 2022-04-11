@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sedona</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/icon/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/icon/favicon/apple.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script src="js/main-nav.js" defer></script>
+  </head>
+  <body class="page__body">
+    <div class="page__wrapper page__wrapper--hotels">
+      <header class="page-header page-header--hotels">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source
+              media="(min-width: 1200px)"
+              srcset="img/Logo_Sedona_desktop.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/Logo_Sedona_tablet.svg"
+            />
+            <img
+              src="img/Logo_Sedona.svg"
+              width=""
+              height=""
+              alt="Логотип Sedona"
+            />
+          </picture>
+        </a>
+        <nav class="main-nav main-nav--closed nav-hotel">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list main-nav__list--toggle">
+              <li class="main-nav__item">
+                <a class="link main-nav__link" href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link link" href="catalog.html"
+                  >Фото и видео</a
+                >
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link link" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="link main-nav__link main-nav__link--current" href="#"
+                  >Гостиницы</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="page-main page-main__catalog">
+        <h1 class="visually-hidden">Седона — сайт для туристов!</h1>
+        <section class="filter">
+          <h2 class="visually-hidden">Фильтр поиска</h2>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <div class="filter__wrapper">
+              <div class="column-1">
+                <fieldset
+                  class="form-review__item form-group form-group--infrastructure"
+                >
+                  <span>
+                    <legend class="form-group__title--infrastructure">
+                      Инфраструктура:
+                    </legend>
+                  </span>
+                  <div class="filter__checkbox-container">
+                    <div class="filter--checkbox">
+                      <input
+                        class="visually-hidden field__input--checkbox"
+                        type="checkbox"
+                        name="devil-bridge"
+                        id="devil-bridge"
+                        aria-label="Мост дьявола"
+                        checked
+                      />
+                      <label
+                        class="field__label filter__checkbox"
+                        for="devil-bridge"
+                        >Бассейн</label
+                      >
+                    </div>
+                    <div class="filter--checkbox">
+                      <input
+                        class="visually-hidden field__input--checkbox"
+                        type="checkbox"
+                        name="parking"
+                        id="parking"
+                        aria-label="Парковка"
+                      />
+                      <label class="field__label filter__checkbox" for="parking"
+                        >Парковка</label
+                      >
+                    </div>
+                    <div class="filter--checkbox">
+                      <input
+                        class="visually-hidden field__input--checkbox"
+                        type="checkbox"
+                        name="wi-fi"
+                        id="wi-fi"
+                        aria-label="wi-fi"
+                      />
+                      <label class="field__label filter__checkbox" for="wi-fi"
+                        >Wi-Fi</label
+                      >
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset
+                  class="form-review__item form-group form-group--infrastructure"
+                >
+                  <span>
+                    <legend class="form-group__title--infrastructure">
+                      Тип жилья:
+                    </legend>
+                  </span>
+                  <div class="filter__checkbox-container">
+                    <div class="filter--checkbox">
+                      <input
+                        class="visually-hidden field__input--checkbox"
+                        type="checkbox"
+                        name="hotel"
+                        id="hotel"
+                        aria-label="Гостиница"
+                        checked
+                      />
+                      <label class="field__label filter__checkbox" for="hotel"
+                        >Гостиница</label
+                      >
+                    </div>
+                    <div class="filter--checkbox">
+                      <input
+                        class="visually-hidden field__input--checkbox"
+                        type="checkbox"
+                        name="motel"
+                        id="motel"
+                        aria-label="Мотель"
+                        checked
+                      />
+                      <label class="field__label filter__checkbox" for="motel"
+                        >Мотель</label
+                      >
+                    </div>
+                    <div class="filter--checkbox">
+                      <input
+                        class="visually-hidden field__input--checkbox"
+                        type="checkbox"
+                        name="apartmenst"
+                        id="apartments"
+                        aria-label="Апартаменты"
+                        checked
+                      />
+                      <label
+                        class="field__label filter__checkbox"
+                        for="apartments"
+                        >Апартаменты</label
+                      >
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="column-2">
+                <fieldset
+                  class="form-review__item form-group form-group--infrastructure abc"
+                >
+                  <span>
+                    <legend class="form-group__title--infrastructure">
+                      Стоимость в сутки, ₽:
+                    </legend>
+                  </span>
+                  <div class="filter__range-container">
+                    <div class="range-container">
+                      <input
+                        class="filter_type_range"
+                        type="range"
+                        value="20"
+                      />
+                    </div>
+                    <button class="button button_type_range">Показать</button>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section class="sorting">
+          <h2 class="visually-hidden">Сортировка</h2>
+          <div class="sorting__wrapper">
+            <h3 class="sorting__title">Найдено: 4</h3>
+            <div class="sorting__type">
+              <div class="sorting__list-container">
+                <h4 class="sorting__heading">Сортировка:</h4>
+                <ul class="sorting__list">
+                  <li class="sorting__item sorting__item--current">По цене</li>
+                  <li class="sorting__item">По типу</li>
+                  <li class="sorting__item">По рейтингу</li>
+                </ul>
+              </div>
+              <div class="sorting__button-container">
+                <button class="sorting__button sorting__button--up"></button>
+                <button class="sorting__button sorting__button--down"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cards">
+          <h2 class="visually-hidden">Карточки отелей</h2>
+          <div class="cards__wrapper">
+            <article class="card-house">
+              <img
+                class="card-house__image"
+                src="img/hotels/hotel-1.jpg"
+                alt=""
+              />
+              <div class="card-house__wrapper">
+                <div class="card-house__description">
+                  <h3 class="card-house__title">Amara Resort & SPA</h3>
+                  <div class="card-house__type">
+                    <p class="card-house__text">Гостиница</p>
+                    <button class="button card-house__button">Подробнее</button>
+                  </div>
+                  <div class="card-house__price">
+                    <p class="card-house__text">от 18 000 ₽</p>
+                    <button
+                      class="button card-house__button card-house__button--price"
+                    >
+                      Бронь
+                    </button>
+                  </div>
+                </div>
+                <div class="card-house__raiting">
+                  <div class="raiting__container">
+                    <fieldset class="raiting">
+                      <div class="raiting__group">
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="amara"
+                          value="1"
+                          aria-label="Ужасно"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="amara"
+                          value="2"
+                          aria-label="Плохо"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="amara"
+                          value="3"
+                          aria-label="Нормально"
+                          checked
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="amara"
+                          value="4"
+                          aria-label="Хорошо"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="amara"
+                          value="5"
+                          aria-label="Отлично"
+                        />
+                      </div>
+                    </fieldset>
+                  </div>
+                  <p class="card-house__raiting-value">Рейтинг: 7,3</p>
+                </div>
+              </div>
+            </article>
+            <article class="card-house">
+              <img
+                class="card-house__image"
+                src="img/hotels/hotel-2.jpg"
+                alt=""
+              />
+              <div class="card-house__wrapper">
+                <div class="card-house__description">
+                  <h3 class="card-house__title">Desert quail inn</h3>
+                  <div class="card-house__type">
+                    <p class="card-house__text">Мотель</p>
+                    <button class="button card-house__button">Подробнее</button>
+                  </div>
+                  <div class="card-house__price">
+                    <p class="card-house__text">от 27 000 ₽</p>
+                    <button
+                      class="button card-house__button card-house__button--price"
+                    >
+                      Бронь
+                    </button>
+                  </div>
+                </div>
+                <div class="card-house__raiting">
+                  <div class="raiting__container">
+                    <fieldset class="raiting">
+                      <div class="raiting__group">
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="quail"
+                          value="1"
+                          aria-label="Ужасно"
+                          checked
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="quail"
+                          value="2"
+                          aria-label="Плохо"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="quail"
+                          value="3"
+                          aria-label="Нормально"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="quail"
+                          value="4"
+                          aria-label="Хорошо"
+                          checked
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="quail"
+                          value="5"
+                          aria-label="Отлично"
+                        />
+                      </div>
+                    </fieldset>
+                  </div>
+                  <p class="card-house__raiting-value">Рейтинг: 8,9</p>
+                </div>
+              </div>
+            </article>
+            <article class="card-house">
+              <img
+                class="card-house__image"
+                src="img/hotels/hotel-3.jpg"
+                alt=""
+              />
+              <div class="card-house__wrapper">
+                <div class="card-house__description">
+                  <h3 class="card-house__title">Villas At Poco Diablo</h3>
+                  <div class="card-house__type">
+                    <p class="card-house__text">Апартаменты</p>
+                    <button class="button card-house__button">Подробнее</button>
+                  </div>
+                  <div class="card-house__price">
+                    <p class="card-house__text">от 32 000 ₽</p>
+                    <button
+                      class="button card-house__button card-house__button--price"
+                    >
+                      Бронь
+                    </button>
+                  </div>
+                </div>
+                <div class="card-house__raiting">
+                  <div class="raiting__container">
+                    <fieldset class="raiting">
+                      <div class="raiting__group">
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="villas"
+                          value="1"
+                          aria-label="Ужасно"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="villas"
+                          value="2"
+                          aria-label="Плохо"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="villas"
+                          value="3"
+                          aria-label="Нормально"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="villas"
+                          value="4"
+                          aria-label="Хорошо"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="villas"
+                          value="5"
+                          aria-label="Отлично"
+                          checked
+                        />
+                      </div>
+                    </fieldset>
+                  </div>
+                  <p class="card-house__raiting-value">Рейтинг: 9,2</p>
+                </div>
+              </div>
+            </article>
+            <article class="card-house">
+              <img
+                class="card-house__image"
+                src="img/hotels/hotel-4.jpg"
+                alt=""
+              />
+              <div class="card-house__wrapper">
+                <div class="card-house__description">
+                  <h3 class="card-house__title">Sky Ranch Lodge</h3>
+                  <div class="card-house__type">
+                    <p class="card-house__text">Отель</p>
+                    <button class="button card-house__button">Подробнее</button>
+                  </div>
+                  <div class="card-house__price">
+                    <p class="card-house__text">от 24 000 ₽</p>
+                    <button
+                      class="button card-house__button card-house__button--price"
+                    >
+                      Бронь
+                    </button>
+                  </div>
+                </div>
+                <div class="card-house__raiting">
+                  <div class="raiting__container">
+                    <fieldset class="raiting">
+                      <div class="raiting__group">
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="ranch"
+                          value="1"
+                          aria-label="Ужасно"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="ranch"
+                          value="2"
+                          aria-label="Плохо"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="ranch"
+                          value="3"
+                          aria-label="Нормально"
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="ranch"
+                          value="4"
+                          aria-label="Хорошо"
+                          checked
+                        />
+                        <input
+                          class="raiting__star"
+                          type="radio"
+                          name="ranch"
+                          value="5"
+                          aria-label="Отлично"
+                        />
+                      </div>
+                    </fieldset>
+                  </div>
+                  <p class="card-house__raiting-value">Рейтинг: 8,5</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="footer footer__container">
+        <p class="footer__item">#VisitSedona</p>
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="button button--social">
+                <span class="visually-hidden">Твиттер</span>
+                <svg width="17.5" height="14.57">
+                  <use xlink:href="img/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="button button--social">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg width="8.7" height="18.9">
+                  <use href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="button button--social">
+                <span class="visually-hidden">YouTube</span>
+                <svg width="19.91" height="14">
+                  <use href="img/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__copyright copyright">
+          <p class="copyright__author">Разработано</p>
+          <a
+            class="copyright__link"
+            target="_blank"
+            href="https://up.htmlacademy.ru/profession/frontender-lite/1/lite-adaptive"
+          >
+            <span class="visually-hidden">Логотип HTML академии</span>
+            <svg width="26.9" height="34.1">
+              <use href="img/sprite.svg#academy-logo"></use>
+            </svg>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

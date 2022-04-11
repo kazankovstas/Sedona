@@ -22,6 +22,9 @@
   min-height: 100%;
   background-color: $white-basic;
   box-shadow: 2px 0 14px 6px #929292;
+  &--hotels {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  }
 }
 
 .page-main {

@@ -1,0 +1,213 @@
+.nav-hotel {
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  @media (min-width: $tablet-width) {
+    height: 53px;
+  }
+}
+
+.filter {
+  min-height: 217px;
+  padding: 12.5px 22px 32px;
+  color: white;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  @media (min-width: $tablet-width) {
+    padding: 12.5px 32px 32px;
+    background-image: url(../../img/hotels/hotel-header.jpg);
+    background-repeat: no-repeat;
+  }
+}
+
+.filter__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    background-color: transparent;
+  }
+}
+
+.column-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @media (min-width: 550px) {
+    flex-direction: row;
+    padding: 0 12px;
+    gap: 52px;
+  }
+  @media (min-width: $tablet-width) {
+    gap: 52px;
+  }
+}
+
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $tablet-width) {
+    padding: 0 12px;
+  }
+}
+
+// Legend ----------------------------------------------------- Legend
+.form-group__title--infrastructure {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  margin-bottom: 24.5px;
+}
+
+// Checkbox ---------------------------------------------------- Checkbox
+.filter__checkbox {
+  position: relative;
+  cursor: pointer;
+  margin-left: 42px;
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  transition: 0.3s;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 23px;
+    left: -42px;
+    background-image: url(../../img/hotels/checkbox-off.svg);
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 23px;
+    left: -42px;
+  }
+}
+
+.filter--checkbox:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+// Поведение checkbox -------------------------------------------------
+.field__input--checkbox {
+  &:focus + .filter__checkbox {
+    border-bottom: 3px solid #ffc300;
+  }
+  &:hover + .filter__checkbox::before,
+  &:hover + .filter__checkbox::after {
+    opacity: 0.6;
+  }
+  &:checked + .filter__checkbox::after {
+    background-image: url(../../img/hotels/checkbox-on.svg);
+  }
+  &:checked + .filter__checkbox::before {
+    display: none;
+  }
+}
+
+// Range ---------------------------------------------------------------------- Range
+.filter__range-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter_type_range {
+  margin-bottom: 25px;
+  &:focus {
+    box-shadow: inset 0 0 2px 3px rgb(83, 155, 184);
+  }
+}
+
+.button_type_range {
+  width: 100%;
+  background-color: transparent;
+  border: 3px solid white;
+  padding: 14.5px 40px 14.5px;
+  @media (min-width: $tablet-width) {
+    width: 317px;
+  }
+  &:hover {
+    color: rgba($color: #ffffff, $alpha: 0.5);
+    background-color: rgba($color: #000000, $alpha: 0.1);
+    border: 3px solid rgba($color: #ffffff, $alpha: 0.7);
+  }
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.2);
+  }
+}
+
+.range-container {
+  margin-bottom: 18px;
+  background-color: rgba($color: #000000, $alpha: 0.1);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+  }
+}
+
+// Range ------------------------------------------------------- Range
+.filter_type_range {
+  margin: 0 auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 80%;
+  height: 3px;
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+  cursor: pointer;
+  transition: 0.2s;
+  @media (min-width: $tablet-width) {
+    z-index: 2;
+    width: 317px;
+  }
+  &::-moz-range-thumb:hover {
+    background: $blue-basic;
+  }
+  &::-moz-range-thumb:active {
+    background: $blue-down;
+  }
+  &::-webkit-slider-thumb:hover {
+    background: $blue-basic;
+  }
+  &::-webkit-slider-thumb:active {
+    background: $blue-down;
+  }
+}
+
+// Chrome
+.filter_type_range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+// Mozilla
+.filter_type_range::-moz-range-thumb {
+  background: white;
+  width: 19px;
+  height: 19px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.abc {
+  @media (min-width: 550px) {
+    width: 85%;
+    margin: 0 auto;
+  }
+}

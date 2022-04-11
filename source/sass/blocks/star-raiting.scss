@@ -1,0 +1,84 @@
+.star {
+  width: 180px;
+  height: 600px;
+  background-color: rgb(165, 223, 218);
+  margin: 0 auto;
+}
+
+.raiting {
+  border: none;
+}
+
+.raiting__container {
+  padding: 4px 9px;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 156px;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 10px 9px;
+    background-color: $blue-basic;
+  }
+}
+
+.raiting__group {
+  position: relative;
+  width: 100%;
+  height: 25px;
+  background-image: url(../../img/hotels/star-off.svg);
+  background-size: 2em auto;
+  background-repeat: repeat-x;
+  &:focus-within {
+    outline: 0.2em solid rgb(83, 155, 184);
+    outline-offset: 0.7em;
+  }
+}
+
+.raiting__caption {
+  margin-bottom: 0.5em;
+}
+
+.raiting__star {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 2em;
+  font-size: inherit;
+  background-repeat: repeat-x;
+  background-size: 2em auto;
+  &:focus {
+    outline: none;
+  }
+  &:checked,
+  &:hover {
+    background-image: url(../../img/hotels/star-on.svg);
+  }
+  &:hover ~ .raiting__star {
+    background-image: url(../../img/hotels/star-off.svg);
+  }
+  &:nth-of-type(1) {
+    z-index: 5;
+    width: 2em;
+  }
+  &:nth-of-type(2) {
+    z-index: 4;
+    width: 4em;
+  }
+  &:nth-of-type(3) {
+    z-index: 3;
+    width: 6em;
+  }
+  &:nth-of-type(4) {
+    z-index: 2;
+    width: 8em;
+  }
+  &:nth-of-type(5) {
+    z-index: 1;
+    width: 10em;
+  }
+}

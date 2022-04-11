@@ -18,3 +18,66 @@
     background-image: url(../../img/map/map-desktop.jpg);
   }
 }
+
+.modal-hotel__container {
+  position: relative;
+}
+
+.modal-hotel {
+  position: absolute;
+  width: 568px;
+  min-height: 395px;
+  padding: 55px;
+  box-shadow: 0 0 10px 0 #929292;
+  background-color: $white-basic;
+  display: none;
+  &--show {
+    display: grid;
+  }
+}
+
+.modal-hotel__button {
+  width: 100%;
+  padding: 16px 0;
+}
+
+.modal-hotel__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 54px;
+}
+
+.modal-hotel__input {
+  width: 346px;
+  min-height: 38px;
+  background-color: #f2f2f2;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 6px 13px;
+  border: none;
+  border-radius: 10px;
+  &--min {
+    width: 114px;
+    text-align: center;
+  }
+}
+
+.modal-hotel__label {
+  font-family: inherit;
+  font-weight: 700;
+  &--min {
+    margin-right: 37px;
+  }
+}
+
+.modal-hotel__date-item {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+}
+
+.modal-hotel__input-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

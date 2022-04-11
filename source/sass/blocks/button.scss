@@ -12,6 +12,10 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s;
+  &:focus-within {
+    box-shadow: 0 0 2px 3px rgb(83, 155, 184);
+    outline: none;
+  }
   &:hover {
     background-color: $blue-hover;
   }
@@ -37,13 +41,8 @@
 
   &--reserve {
     width: 280px;
-    margin-bottom: 49px;
     @media (min-width: $tablet-width) {
-      width: 458px;
-      margin-bottom: 58px;
-    }
-    @media (min-width: $desktop-width) {
-      margin-bottom: 66px;
+      width: 568px;
     }
   }
 

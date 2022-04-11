@@ -40,11 +40,10 @@
   @media (min-width: $tablet-width) {
     width: 20%;
   }
-}
-
-.main-nav__item:nth-child(2) {
-  @media (min-width: $tablet-width) {
-    margin-right: 20%;
+  &:nth-child(2) {
+    @media (min-width: $tablet-width) {
+      margin-right: 20%;
+    }
   }
 }
 
@@ -67,7 +66,7 @@
     color: $white-down;
   }
   @media (min-width: $tablet-width) {
-    display: inline-block;
+    // display: inline-block;
     margin: 0;
     padding: 8px 0 6px;
     color: $black-basic;
@@ -78,6 +77,11 @@
     &:active {
       color: $black-down;
     }
+  }
+  &--current {
+    color: $current;
+    pointer-events: none;
+    cursor: default;
   }
 }
 
