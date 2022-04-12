@@ -973,6 +973,14 @@ img {
   .modal-hotel__input--min {
     width: 114px;
     text-align: center; }
+  .modal-hotel__input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 3px;
+    background-image: url(../../img/icon/calendar.svg); }
+    .modal-hotel__input::-webkit-calendar-picker-indicator:hover {
+      opacity: 0.5; }
 
 .modal-hotel__label {
   font-family: inherit;
@@ -985,6 +993,10 @@ img {
   grid-template-columns: 1fr -webkit-max-content;
   grid-template-columns: 1fr max-content;
   align-items: center; }
+  .modal-hotel__date-item ::-webkit-inner-spin-button {
+    -webkit-appearance: none; }
+  .modal-hotel__date-item ::-webkit-outer-spin-button {
+    -webkit-appearance: none; }
 
 .modal-hotel__input-wrapper {
   display: flex;
