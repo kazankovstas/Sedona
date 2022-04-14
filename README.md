@@ -4,7 +4,7 @@
 
 ---
 
-### <a href="https://kazankovstas.github.io/project-Pink/index.html">Ссылка на проект</a>
+### <a href="https://kazankovstas.github.io/Sedona/">Ссылка на проект</a>
 
 ## <img src="source/img/readme/sedona.gif">
 
