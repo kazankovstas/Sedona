@@ -172,7 +172,7 @@ img {
   text-align: center;
   margin-top: -41px;
   order: 2; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  @media (min-resolution: 2dppx) {
     .page-header__main-image {
       background-image: url(../../img/intro/intro-triangle-mobile.svg), url(../../img/intro/back-mobile@2x.jpg); } }
   @media (min-width: 768px) {
@@ -180,13 +180,13 @@ img {
       min-height: 518px;
       padding: 77px 0 91px 0;
       background-image: url(../../img/intro/intro-triangle-mobile.svg), url(../../img/intro/back-tablet.jpg); } }
-  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
     .page-header__main-image {
       background-image: url(../../img/intro/intro-triangle-mobile.svg), url(../../img/intro/back-tablet@2x.jpg); } }
   @media (min-width: 1200px) {
     .page-header__main-image {
       background-image: url(../../img/intro/intro-triangle-mobile.svg), url(../../img/intro/back-desktop.jpg); } }
-  @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
     .page-header__main-image {
       background-image: url(../../img/intro/intro-triangle-mobile.svg), url(../../img/intro/back-desktop@2x.jpg); } }
 
@@ -763,38 +763,38 @@ img {
 
 .advantages__item--pic:nth-child(1)::before {
   background-image: url(../../img/city_mobile.jpg); }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  @media (min-resolution: 2dppx) {
     .advantages__item--pic:nth-child(1)::before {
       background-image: url("../../img/city_mobile@2x.jpg"); } }
   @media (min-width: 768px) {
     .advantages__item--pic:nth-child(1)::before {
       background-image: url(../../img/city_tablet.jpg); } }
-  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
     .advantages__item--pic:nth-child(1)::before {
       background-image: url("../../img/city_tablet@2x.jpg"); } }
   @media (min-width: 1200px) {
     .advantages__item--pic:nth-child(1)::before {
       background-image: url(../../img/city_desktop.jpg); } }
-  @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
     .advantages__item--pic:nth-child(1)::before {
       background-image: url("../../img/city_desktop@2x.jpg"); } }
 
 .advantages__item--pic:nth-child(2):before {
   background-image: url(../../img/bridge_mobile.jpg);
   order: 1; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  @media (min-resolution: 2dppx) {
     .advantages__item--pic:nth-child(2):before {
       background-image: url("../../img/bridge_mobile@2x.jpg"); } }
   @media (min-width: 768px) {
     .advantages__item--pic:nth-child(2):before {
       background-image: url(../../img/bridge_tablet.jpg); } }
-  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
     .advantages__item--pic:nth-child(2):before {
       background-image: url("../../img/bridge_tablet@2x.jpg"); } }
   @media (min-width: 1200px) {
     .advantages__item--pic:nth-child(2):before {
       background-image: url(../../img/bridge_desktop.jpg); } }
-  @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
+  @media (min-width: 1200px) and (min-resolution: 2dppx) {
     .advantages__item--pic:nth-child(2):before {
       background-image: url("../../img/bridge_desktop@2x.jpg"); } }
 
@@ -1254,9 +1254,8 @@ input[type="number"] {
   min-height: 48px;
   margin-left: 78px;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   padding-right: 20px; }
 
 .field__input--radio + .field__label--radio::before {
@@ -1291,9 +1290,8 @@ input[type="number"] {
   display: block;
   margin-left: 78px;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none; }
+  -moz-user-select: none;
+       user-select: none; }
 
 .field__input--checkbox + .field__label--checkbox::before {
   position: absolute;

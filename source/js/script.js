@@ -1,3 +1,4 @@
+// ----------------------------------------------------------------------hotel-modal
 const openModal = document.querySelector(".button--reserve");
 const closeModal = document.querySelector(".modal-hotel__button");
 const formHotel = document.querySelector(".form-hotel");
@@ -23,7 +24,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-// Закрытие карты кликом вне ее область
+// Закрытие попапа кликом
 window.addEventListener("mousedown", function (evt) {
   if (evt.target.closest(".modal-hotel") === null) {
     modalHotel.classList.remove("modal-hotel--show");
