@@ -7,7 +7,6 @@
 }
 
 .main-nav__wrapper {
-  // max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -66,7 +65,6 @@
     color: $white-down;
   }
   @media (min-width: $tablet-width) {
-    // display: inline-block;
     margin: 0;
     padding: 8px 0 6px;
     color: $black-basic;
@@ -152,7 +150,7 @@
   margin: 0;
   cursor: pointer;
   background-color: transparent;
-  background-image: url(../../img/icon/menu_close.svg);
+  background-image: url(../img/icon/menu_close.svg);
   transition: all 0.3s ease-in-out;
 
   &:hover {
