@@ -1,6 +1,6 @@
 # SEDONA
 
-<a href="https://kazankovstas.github.io/project-Pink/">
+<a href="https://kazankovstas.github.io/Sedona/">
     <img src="source/img/readme/sedona-1.png">
   </a>
 
