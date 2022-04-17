@@ -38,7 +38,7 @@
   background-color: $lightgrey;
 }
 
-// Серые блоки №4 №5 №6 --------------------------------
+// Серые блоки №3 №4 №5 --------------------------------
 .advantages__item--accent {
   position: relative;
 
@@ -125,12 +125,6 @@
   text-align: center;
   font-size: 21px;
   font-weight: 700;
-
-  @media (max-width: $tablet-width) {
-    br {
-      display: none;
-    }
-  }
 }
 
 .advantages__title--accent {
@@ -260,9 +254,6 @@
   text-align: start;
   padding: 26px 0 0;
   max-width: 240px;
-  br {
-    display: none;
-  }
   @media (min-width: $tablet-width) {
     width: auto;
     text-align: center;
