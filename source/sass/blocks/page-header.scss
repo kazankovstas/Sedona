@@ -34,10 +34,10 @@
   position: relative;
   min-height: 389px;
   background-image: url(../img/intro/intro-triangle-mobile.svg),
-    url(../img/intro/back-mobile.jpg);
+    url(../img/intro/back-mobile.webp);
   @media (min-resolution: 2dppx) {
     background-image: url(../img/intro/intro-triangle-mobile.svg),
-      url(../img/intro/back-mobile@2x.jpg);
+      url(../img/intro/back-mobile@2x.webp);
   }
   background-color: rgb(98, 198, 223);
   background-repeat: no-repeat;
@@ -53,19 +53,19 @@
     min-height: 518px;
     padding: 77px 0 91px 0;
     background-image: url(../img/intro/intro-triangle-mobile.svg),
-      url(../img/intro/back-tablet.jpg);
+      url(../img/intro/back-tablet.webp);
     @media (min-resolution: 2dppx) {
       background-image: url(../img/intro/intro-triangle-mobile.svg),
-        url(../img/intro/back-tablet@2x.jpg);
+        url(../img/intro/back-tablet@2x.webp);
     }
   }
 
   @media (min-width: $desktop-width) {
     background-image: url(../img/intro/intro-triangle-mobile.svg),
-      url(../img/intro/back-desktop.jpg);
+      url(../img/intro/back-desktop.webp);
     @media (min-resolution: 2dppx) {
       background-image: url(../img/intro/intro-triangle-mobile.svg),
-        url(../img/intro/back-desktop@2x.jpg);
+        url(../img/intro/back-desktop@2x.webp);
     }
   }
 }
@@ -121,5 +121,14 @@
   @media (min-width: $tablet-width) {
     width: 283px;
     height: 75px;
+  }
+}
+
+.page-header__main-logo {
+  width: 102px;
+  height: 84px;
+  @media (min-width: $desktop-width) {
+    width: 187px;
+    height: 97px;
   }
 }
