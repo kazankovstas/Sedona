@@ -3,14 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="My pet-project" />
     <title>Sedona</title>
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/icon/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/icon/favicon/apple.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <script src="js/main-nav.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <link
+      rel="preload"
+      href="fonts/ptsans/ptsans.woff2"
+      type="font/woff2"
+      as="font"
+    />
+    <link
+      rel="preload"
+      href="fonts/ptsans/ptsansbold.woff2"
+      type="font/woff2"
+      as="font"
+    />
+    <link rel="preload" href="img/intro/back-desktop@2x.webp" />
+    <link rel="preload" href="img/intro/back-tablet@2x.webp" />
+    <link rel="preload" href="img/intro/back-mobile@2x.webp" />
+    <script src="js/main-nav.js" async></script>
+    <script src="js/script.js" async></script>
   </head>
   <body class="page__body">
     <div class="page__wrapper">
@@ -40,8 +56,8 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list main-nav__list--toggle">
               <li class="main-nav__item">
-                <a class="link main-nav__link main-nav__link--current"
-                  >Главная</a
+                <aа class="link main-nav__link main-nav__link--current"
+                  >Главная</aа
                 >
               </li>
               <li class="main-nav__item">
@@ -63,18 +79,30 @@
             <img
               class="pic--welcome"
               src="img/intro/welcome_mobile.svg"
-              alt=""
+              alt="Добро пожаловть"
+              width="115"
+              height="28"
             />
             <img
               class="pic--subtitle"
               src="img/intro/subtitle_mobile.svg"
-              alt=""
+              alt="Подзаголовок"
+              width="107"
+              height="18"
             />
-            <img class="pic--title" src="img/intro/title_mobile.svg" alt="" />
+            <img
+              class="pic--title"
+              src="img/intro/title_mobile.svg"
+              alt="Седона"
+              width="282"
+              height="49"
+            />
             <img
               class="pic--description"
               src="img/intro/description_mobile.svg"
-              alt=""
+              alt="Описание"
+              width="173"
+              height="46"
             />
           </div>
         </div>
@@ -275,6 +303,7 @@
           </div>
           <div class="reserve__map">
             <iframe
+              name="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002599.578252761!2d-112.93954089893026!3d34.47698881997869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1648888302545!5m2!1sru!2sru"
               width="100%"
               height="350px"
