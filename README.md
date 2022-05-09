@@ -9,10 +9,13 @@
   </p>
 
 ## <a href="https://kazankovstas.github.io/Sedona/">
+
     View Live
+
   </a>
 
 ## Описание
+
 #### Учебный проект «Седона» был выполнен в рамках пройденного онлайн‑курса «Продвинутый HTML и CSS» от HTML Academy.
 
 - Адаптивность сетки: мобильная, планшетная и десктопная версии (responsive layout).
@@ -23,13 +26,8 @@
 
 ---
 
- <p align="center">
-    <img src="source/img/readme/pagespeed.png">
-  </p>
-
----
-
 ## PageSpeed Insights
+
 <table>
   <tr>
     <th>Desktop</th>
@@ -37,10 +35,10 @@
   </tr>
   <tr valign="top">
     <td>
-        <img src="source/img/readme/pagespeed.png" width="300" alt="PageSpeed Insights Desktop">
+        <img src="source/img/readme/pagespeed.png" alt="PageSpeed Insights Desktop">
     </td>
     <td>
-        <img src="source/img/readme/pagespeed-m.png" width="300" alt="PageSpeed Insights Mobile"> 
+        <img src="source/img/readme/pagespeed-m.png" alt="PageSpeed Insights Mobile">
     </td>
   </tr>
 </table>
