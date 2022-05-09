@@ -24,5 +24,5 @@
 ---
 
  <p align="center">
-    <img src="source/img/readme/lighthouse.png">
+    <img src="source/img/readme/pagespeed.png">
   </p>
