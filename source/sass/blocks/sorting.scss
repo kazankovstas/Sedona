@@ -1,8 +1,10 @@
 .sorting {
   padding: 12.5px 22px 32px;
-  color: $white-basic;
+  display: none;
   @media (min-width: $tablet-width) {
+    display: block;
     padding: 0;
+    color: $white-basic;
   }
 }
 

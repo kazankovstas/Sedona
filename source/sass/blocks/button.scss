@@ -19,12 +19,14 @@
   &:hover {
     background-color: $blue-hover;
   }
+  &:disabled {
+    background-color: $grey;
+  }
   &:active {
     background-color: $blue-down;
     color: $white-down;
-  }
-  &:disabled {
-    background-color: $grey;
+    outline: none;
+    box-shadow: none;
   }
 
   &--social {

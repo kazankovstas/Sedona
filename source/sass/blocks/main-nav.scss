@@ -63,6 +63,7 @@
   &:active {
     background-color: $blue-down;
     color: $white-down;
+    box-shadow: none;
   }
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -74,6 +75,7 @@
     }
     &:active {
       color: $black-down;
+      box-shadow: none;
     }
   }
   &--current {
