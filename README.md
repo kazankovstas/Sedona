@@ -26,3 +26,18 @@
  <p align="center">
     <img src="source/img/readme/pagespeed.png">
   </p>
+## PageSpeed Insights
+<table>
+  <tr>
+    <th>Для компьютеров</th>
+    <th>Для мобильных</th>
+  </tr>
+  <tr valign="top">
+    <td>
+        <img src="source/img/preview/sedonaPageInsights_desk.PNG" width="300" alt="PageSpeed Insights Desktop">
+    </td>
+    <td>
+        <img src="source/img/preview/sedonaPageInsights_mob.PNG" width="300" alt="PageSpeed Insights Mobile"> 
+    </td>
+  </tr>
+</table>
