@@ -8,7 +8,7 @@
     <img src="source/img/readme/sedona.gif">
   </p>
 
-<a href="https://kazankovstas.github.io/Sedona/">
+## <a href="https://kazankovstas.github.io/Sedona/">
     View Live
   </a>
 
