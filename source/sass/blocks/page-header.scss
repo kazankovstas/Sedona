@@ -16,6 +16,11 @@
   z-index: 1;
   display: inline-block;
   cursor: pointer;
+  &:focus-visible {
+    box-shadow: 0 0 2px 3px rgb(83, 155, 184);
+    border-radius: 8px;
+    outline: none;
+  }
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 0;

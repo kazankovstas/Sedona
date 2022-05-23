@@ -8,8 +8,14 @@
   display: flex;
   transition: 0.3s;
   color: $black-basic;
+  -webkit-tap-highlight-color: transparent;
   &:hover {
     color: $blue-basic;
+  }
+  &:focus-visible {
+    outline: none;
+    background-color: $blue-basic;
+    border-radius: 30%;
   }
   &:active {
     color: $black-down;

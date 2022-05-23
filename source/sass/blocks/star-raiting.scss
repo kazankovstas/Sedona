@@ -28,7 +28,7 @@
   background-image: url(../img/hotels/star-off.svg);
   background-size: 2em auto;
   background-repeat: repeat-x;
-  &:focus-within {
+  &:focus-visible {
     outline: 0.2em solid rgb(83, 155, 184);
     outline-offset: 0.7em;
   }
@@ -51,8 +51,10 @@
   font-size: inherit;
   background-repeat: repeat-x;
   background-size: 2em auto;
-  &:focus {
-    outline: none;
+  -webkit-tap-highlight-color: transparent;
+  &:focus-visible {
+    outline: 2px solid $star;
+    border-radius: 8px;
   }
   &:checked,
   &:hover {

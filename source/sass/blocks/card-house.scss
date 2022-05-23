@@ -89,6 +89,7 @@
   line-height: 21px;
   cursor: pointer;
   border: none;
+  -webkit-tap-highlight-color: transparent;
   &--price {
     background-color: rgba(4, 139, 110, 0.3);
     &:hover {

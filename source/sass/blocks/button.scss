@@ -12,7 +12,8 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s;
-  &:focus-within {
+  -webkit-tap-highlight-color: transparent;
+  &:focus-visible {
     box-shadow: 0 0 2px 3px rgb(83, 155, 184);
     outline: none;
   }

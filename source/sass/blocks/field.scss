@@ -65,7 +65,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.44;
-  &:focus {
+  &:focus-visible {
     border: none;
     outline: none;
     box-shadow: inset 0 0 2px 3px rgb(83, 155, 184);
@@ -108,7 +108,7 @@
   &:hover {
     background-color: $grey;
   }
-  &:focus {
+  &:focus-visible {
     background-color: transparent;
     box-shadow: inset 0 0 2px 3px rgb(83, 155, 184);
   }
@@ -135,6 +135,7 @@ input[type="number"] {
   cursor: pointer;
   user-select: none;
   padding-right: 20px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .field__input--radio + .field__label--radio::before {
@@ -155,7 +156,7 @@ input[type="number"] {
 
 // Цвет при нажатии/фокусе ------------------------------------
 .field__input--radio:active + .field__label--radio::before,
-.field__input--radio:focus + .field__label--radio::before {
+.field__input--radio:focus-visible + .field__label--radio::before {
   background-color: $darkgrey;
 }
 
@@ -177,6 +178,7 @@ input[type="number"] {
   margin-left: 78px;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .field__input--checkbox + .field__label--checkbox::before {
@@ -206,7 +208,7 @@ input[type="number"] {
 }
 
 // Цвет обводки при фокусе
-.field__input--checkbox:focus + .field__label--checkbox::before {
+.field__input--checkbox:focus-visible + .field__label--checkbox::before {
   box-shadow: inset 0 0 2px 3px rgb(83, 155, 184);
 }
 

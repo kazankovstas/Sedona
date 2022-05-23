@@ -152,6 +152,7 @@
   background-color: transparent;
   background-repeat: no-repeat;
   transition: 0.3s;
+  -webkit-tap-highlight-color: transparent;
   &--replay,
   &--subtitles,
   &--fullscreen {

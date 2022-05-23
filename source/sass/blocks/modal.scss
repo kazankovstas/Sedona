@@ -101,6 +101,7 @@
   cursor: pointer;
   border: none;
   transition: 0.3s;
+  -webkit-tap-highlight-color: transparent;
   &:hover {
     background-color: $blue-hover;
   }
