@@ -35,10 +35,10 @@
   </tr>
   <tr valign="top">
     <td>
-        <img src="source/img/readme/pagespeed.png" alt="PageSpeed Insights Desktop">
+        <img src="source/img/readme/sedona-desktop-gsi.png" alt="PageSpeed Insights Desktop">
     </td>
     <td>
-        <img src="source/img/readme/pagespeed-m.png" alt="PageSpeed Insights Mobile">
+        <img src="source/img/readme/sedona-mobile-gsi.png" alt="PageSpeed Insights Mobile">
     </td>
   </tr>
 </table>
